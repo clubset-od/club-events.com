@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add event</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{{url_for('static',filename='static/fontssr/material-icon/css/material-design-iconic-font.min.css')}}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{url_for('static',filename='csssr/style.css')}}">
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <form action="" method="POST" class="appointment-form" id="appointment-form">
+                <h2>ADD EVENT</h2>
+                <div class="form-group-1">
+
+                    
+                    <input type="text" name="eventname" id="name" placeholder="Event name" required />
+                    <div class="input-group">
+                        <div class="rs-select2 js-select-simple select--no-search">
+                            <select name="clubname">
+                                <option disabled="disabled" selected="selected">Club name</option>
+                                <option>Business club</option>
+                                <option>Rotaract club</option>
+                                <option>Sports club</option>
+                                <option>Fine arts club</option>
+                            </select>
+                        </div>
+                    </div>    
+                    <div class="form-group">
+                        <select name="dewanname">
+                            <option disabled="disabled" selected="selected">Dewan name</option>
+                            <option>CHANDRU</option>
+                            <option>AARI</option>
+                            <option>SAINA</option>
+                            <option>PV SINDHU</option>
+                        </select>
+                        <input type="department" name="department" id="department" placeholder="Department" required />
+                        
+                    </div>
+                    <input type="place" name="place" id="place" placeholder="Place" required />
+                    <input type="date" name="date" id="date" placeholder="Date" required />
+                    <input type="time" name="time" id="time" placeholder="Time" required />
+                    <input type="text" name="description" id="Description" placeholder="Description" required />
+                   
+
+                </div>
+                
+                <div class="form-check">
+                    <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                    
+                </div>
+                <div class="form-submit">
+                    <input type="submit" name="submit" id="submit" class="submit" value="ADD" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="static/vendorsr/jquery/jquery.min.js"></script>
+    <script src="static/jssr/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

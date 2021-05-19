@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Docket home</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{url_for('static',filename='static/assetsdh/imgdh/favicon.png')}}" rel="icon">
+  <link href="{{url_for('static',filename='assetsdh/imgdh/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{url_for('static',filename='assetsdh/vendordh/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsdh/vendordh/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsdh/vendordh/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsdh/vendordh/remixicon/remixicon.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsdh/vendordh/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsdh/vendordh/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{url_for('static',filename='assetsdh/cssdh/style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.0.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="static/assetsdh/imgdh/logo.png" alt="">
+        <span>CLUBDEWAN HOME</span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active " href="{{url_for('clubdewanhome')}}">Home</a></li>
+          
+          <li><a class="nav-link scrollto" href="{{url_for('clubdewanapproveod')}}">View OD</a></li>
+          
+          <li><a class="nav-link scrollto" href="{{url_for('clubviewatt')}}">View Attendence</a></li>
+          
+          <li><a class="getstarted scrollto" href="{{url_for('front')}}">LOGOUT</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+ 
+
+      
+         <header class="section-header">
+          
+          <p>VIEW OD</p>
+        </header>
+<center>
+        Search  <br/> <br/>   <input type="search" placeholder="Search..." class="form-control search-input" data-table="customers-list"/>
+
+        <br/> <br/> 
+        <table class="table table-striped table-advance table-hover customers-list" style="width: 200px; " >
+          <tbody>
+            <tr>
+              <th><i class="icon_profile"></i>  Name</th>
+              <th><i class="icon_calendar"></i> Reg no</th>
+              <th><i class="icon_mail_alt"></i> Email</th>
+              <th><i class="icon_pin_alt"></i> Event name</th>
+              <th><i class="icon_profile"></i> Club Name</th>
+              <th><i class="icon_profile"></i> Dewan Name</th>
+              <th><i class="icon_profile"></i> Department</th>
+              <th><i class="icon_profile"></i> Place</th>
+              <th><i class="icon_profile"></i> Date</th>
+              <th><i class="icon_profile"></i>  Time</th>
+              <th><i class="icon_profile"></i> Club dewan</th>
+              <th><i class="icon_profile"></i> HOD</th>
+              <th><i class="icon_profile"></i> Class dewan</th>
+              <th><i class="icon_cogs"></i> Status</th>
+            </tr>
+            <tr>
+              <tbody>
+                {%for viw in stu%}
+                <tr>
+                  <td>{{ viw [3] }}</td>
+                  <td>{{ viw [4] }}</td>
+                  
+                  <td>{{ viw [5] }}</td>
+                  <td>{{ viw [7] }}</td>
+                  <td>{{ viw [8] }}</td>
+                  <td>{{ viw [9] }}</td>
+                  <td>{{ viw [10] }}</td>
+                  <td>{{ viw [11] }}</td>
+                  <td>{{ viw [12] }}</td>
+                  <td>{{ viw [13] }}</td>
+                  <td>{{ viw [15] }}</td>
+                  <td>{{ viw [14] }}</td>
+                  <td>{{ viw [16] }}</td>
+                  <td><a href="{{url_for('clubdewanupdateod',id=viw[0])}}">Update</a></td>
+               
+              
+                </tr>
+                {%endfor%}
+               </tbody> 
+                  
+    
+            </tr>
+            
+          </tbody>
+        </table>
+      
+
+    
+      </center>
+
+     
+        
+
+  <main id="main">
+
+   
+    <!-- ======= Pricing Section ======= -->
+   
+
+    <!-- ======= Team Section ======= -->
+    
+
+   
+
+    
+  <!-- Vendor JS Files -->
+  <script src="static/assetsdh/vendordh/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="static/assetsdh/vendordh/aos/aos.js"></script>
+  <script src="static/assetsdh/vendordh/php-email-form/validate.js"></script>
+  <script src="static/assetsdh/vendordh/swiper/swiper-bundle.min.js"></script>
+  <script src="static/assetsdh/vendordh/purecounter/purecounter.js"></script>
+  <script src="static/assetsdh/vendordh/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assetsdh/vendordh/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assetsdh/jsdh/main.js"></script>
+  <script>
+    (function(document) {
+        'use strict';
+
+        var TableFilter = (function(myArray) {
+            var search_input;
+
+            function _onInputSearch(e) {
+                search_input = e.target;
+                var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
+                myArray.forEach.call(tables, function(table) {
+                    myArray.forEach.call(table.tBodies, function(tbody) {
+                        myArray.forEach.call(tbody.rows, function(row) {
+                            var text_content = row.textContent.toLowerCase();
+                            var search_val = search_input.value.toLowerCase();
+                            row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
+                        });
+                    });
+                });
+            }
+
+            return {
+                init: function() {
+                    var inputs = document.getElementsByClassName('search-input');
+                    myArray.forEach.call(inputs, function(input) {
+                        input.oninput = _onInputSearch;
+                    });
+                }
+            };
+        })(Array.prototype);
+
+        document.addEventListener('readystatechange', function() {
+            if (document.readyState === 'complete') {
+                TableFilter.init();
+            }
+        });
+
+    })(document);
+    
+    function exportTableToExcel(tableID, filename = ''){
+var downloadLink;
+var dataType = 'application/vnd.ms-excel';
+var tableSelect = document.getElementById(tableID);
+var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+
+// Specify file name
+filename = filename?filename+'.xls':'excel_data.xls';
+
+// Create download link element
+downloadLink = document.createElement("a");
+
+document.body.appendChild(downloadLink);
+
+if(navigator.msSaveOrOpenBlob){
+    var blob = new Blob(['\ufeff', tableHTML], {
+        type: dataType
+    });
+    navigator.msSaveOrOpenBlob( blob, filename);
+}else{
+    // Create a link to the file
+    downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+
+    // Setting the file name
+    downloadLink.download = filename;
+    
+    //triggering the function
+    downloadLink.click();
+}
+}
+</script>
+
+
+</body>
+
+</html>

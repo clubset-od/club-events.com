@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>HOD approveod</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{url_for('static',filename='static/assetscd/imgcd/favicon.png')}}" rel="icon">
+  <link href="{{url_for('static',filename='assetscd/imgcd/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{url_for('static',filename='assetscd/vendorcd/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetscd/vendorcd/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetscd/vendorcd/animate.css/animate.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetscd/vendorcd/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetscd/vendorcd/venobox/venobox.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{url_for('static',filename='assetscd/csscd/style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Avilon - v2.2.1
+  * Template URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header-transparent">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="index.html" class="scrollto">HOD HOME</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a> -->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="">Home</a></li>
+          <li><a href="{{url_for('hodapproveod')}}">Approve OD</a></li>
+  
+          
+          </li>
+          <li><a href="{{url_for('front')}}">LOGOUT</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Intro Section ======= -->
+  <section id="intro">
+
+    <div class="intro-text">
+      <h2>Welcome to HEAD OF DEPARTMENT</h2>
+    </div>
+
+    <div class="product-screens">
+
+      <div class="product-screen-1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.6s">
+        <img src="static/assetscd/imgcd/product-screen-1.png" alt="">
+      </div>
+
+      <div class="product-screen-2 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.6s">
+        <img src="static/assetscd/imgcd/product-screen-2.png" alt="">
+      </div>
+
+      <div class="product-screen-3 wow fadeInUp" data-wow-duration="0.6s">
+        <img src="static/assetscd/imgcd/product-screen-3.png" alt="">
+      </div>
+
+    </div>
+
+  </section><!-- End Intro Section -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="section-bg">
+      <div class="container-fluid">
+        <div class="section-header">
+          <h3 class="section-title">APPROVE OD</h3>
+          <span class="section-divider"></span>
+
+        </div>
+
+        <section id="about" class="section-bg">
+          <div class="container-fluid">
+    
+      
+          <div class="row">
+            <div class="col-lg-12">
+              <section class="panel">
+  
+                <div class="panel-body">
+                  <div class="form">
+                    <form class="form-validate form-horizontal" id="feedback_form" method="POST" action="">
+  
+                      
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2"> Name <span class="required" ></span></label>
+                        <div class="col-lg-10">
+                          <input class="form-control" id="name" name="name" value="{{stu[3]}}" type="text" required readonly/>
+                        </div>
+                      </div>
+                      
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2">Reg no<span class="required"  ></span></label>
+                        <div class="col-lg-10">
+                          <input class="form-control" id="regno" name="regno" value="{{stu[4]}}"  type="text" required readonly />
+                        </div>
+                      </div>
+                      
+                      <div class="form-group ">
+                        <label for="cemail" class="control-label col-lg-2">E-Mail <span class="required"  ></span></label>
+                        <div class="col-lg-10">
+                          <input class="form-control " id="email" type="email" value="{{stu[5]}}" name="email" required readonly/>
+                        </div>
+                      </div>
+                      
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2">Event Name <span class="required"  ></span></label>
+                        <div class="col-lg-10">
+                          <input class="form-control" id="name" name="eventname" value="{{stu[7]}}" type="text" required readonly />
+                        </div>
+                      </div>
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2">Club Name <span class="required"  ></span></label>
+                        <div class="col-lg-10">
+                          <input class="form-control" id="name" name="clubname" value="{{stu[8]}}" type="text" required readonly/>
+                        </div>
+                      </div>
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2">Dewan Name <span class="required"  ></span></label>
+                        <div class="col-lg-10">
+                          <input class="form-control" id="dewanname" name="dewanname" value="{{stu[9]}}" type="text" required readonly />
+                        </div>
+                      </div>
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2">Department <span class="required"  ></span></label>
+                        <div class="col-lg-10">
+                          <input class="form-control" id="department" name="department" value="{{stu[10]}}" type="text" required readonly />
+                        </div>
+                      </div>
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2">Place <span class="required"  ></span></label>
+                        <div class="col-lg-10">
+                          <input class="form-control" id="place" name="place" value="{{stu[11]}}" type="place" required readonly />
+                        </div>
+                      </div>
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2">Date <span class="required"  ></span></label>
+                        <div class="col-lg-10">
+                          <input class="form-control" id="date" name="date" value="{{stu[12]}}" type="date" required readonly />
+                        </div>
+                      </div>
+  
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2">Time <span class="required"  ></span></label>
+                        <div class="col-lg-10">
+                          <input class="form-control" id="time" name="time" value="{{stu[13]}}" type="time" required readonly/>
+                        </div>
+                      </div>
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2">Club dewan <span class="required"  ></span></label>
+                        <div class="col-lg-10">
+                          <input class="form-control" id="clubdewan" name="clubdewan" value="{{stu[15]}}" type="text" required readonly/>
+                        </div>
+                      </div>
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2">HOD <span class="required"  ></span></label>
+                        <div class="col-lg-10">
+                          <input class="form-control" id="hod" name="hod" value="{{stu[14]}}" type="text" required />
+                        </div>
+                      </div>
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2">Class dewan<span class="required"  ></span></label>
+                        <div class="col-lg-10">
+                          <input class="form-control" id="classdewan" name="classdewan" value="{{stu[16]}}" type="text" required readonly />
+                        </div>
+                      </div>
+                     
+                      <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-10">
+                          <center><button class="btn btn-primary" type="register">APPROVE OD</button></center>
+                        
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+  
+                </div>
+              </section>
+            </div>
+          </section>    
+          
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+  <!-- Vendor JS Files -->
+  <script src="static/assetscd/vendorcd/jquery/jquery.min.js"></script>
+  <script src="static/assetscd/vendorcd/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assetscd/vendorcd/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/assetscd/vendorcd/php-email-form/validate.js"></script>
+  <script src="static/assetscd/vendorcd/wow/wow.min.js"></script>
+  <script src="static/assetscd/vendorcd/venobox/venobox.min.js"></script>
+  <script src="static/assetscd/vendorcd/superfish/superfish.min.js"></script>
+  <script src="static/assetscd/vendorcd/hoverIntent/hoverIntent.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assetscd/jscd/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+  <meta name="author" content="GeeksLabs">
+  <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+  <link rel="shortcut icon" href="static/imgst/favicon.png">
+
+  <title>Sports club</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="{{url_for('static',filename='cssst/bootstrap.min.css')}}" rel="stylesheet">
+  <!-- bootstrap theme -->
+  <link href="{{url_for('static',filename='cssst/bootstrap-theme.css')}}" rel="stylesheet">
+  <!--external css-->
+  <!-- font icon -->
+  <link href="{{url_for('static',filename='cssst/elegant-icons-style.css')}}" rel="stylesheet" />
+  <link href="{{url_for('static',filename='cssst/font-awesome.min.css')}}" rel="stylesheet" />
+  <!-- full calendar css-->
+  <link href="{{url_for('static',filename='assetsst/fullcalendar/fullcalendar/bootstrap-fullcalendar.css')}}" rel="stylesheet" />
+  <link href="{{url_for('static',filename='assetsst/fullcalendar/fullcalendar/fullcalendar.css')}}" rel="stylesheet" />
+  <!-- easy pie chart-->
+  <link href="{{url_for('static',filename='assetsst/jquery-easy-pie-chart/jquery.easy-pie-chart.css')}}" rel="stylesheet" type="text/css" media="screen" />
+  <!-- owl carousel -->
+  <link rel="stylesheet" href="{{url_for('static',filename='cssst/owl.carousel.css')}}" type="text/css">
+  <link href="{{url_for('static',filename='cssst/jquery-jvectormap-1.2.2.css')}}" rel="stylesheet">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="{{url_for('static',filename='cssst/fullcalendar.css')}}">
+  <link href="{{url_for('static',filename='cssst/widgets.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='cssst/style.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='cssst/style-responsive.css')}}" rel="stylesheet" />
+  <link href="{{url_for('static',filename='cssst/xcharts.min.css')}}" rel=" stylesheet">
+  <link href="{{url_for('static',filename='cssst/jquery-ui-1.10.4.min.css')}}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- =======================================================
+    Theme Name: NiceAdmin
+    Theme URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+  <!-- container section start -->
+  <section id="container" class="">
+
+
+    <header class="header dark-bg">
+      
+
+      <!--logo start-->
+      <a href="" class="logo"><span class="lite">Admin</span></a>
+      <!--logo end-->
+
+      <div class="nav search-row" id="top_menu">
+        <!--  search form start -->
+        <ul class="nav top-menu">
+          <li>
+            <form class="navbar-form">
+              <input class="form-control" placeholder="Search" type="text">
+            </form>
+          </li>
+        </ul>
+        <!--  search form end -->
+      </div>
+
+      <div class="top-nav notification-row">
+        <!-- notificatoin dropdown start-->
+        <ul class="nav pull-right top-menu">
+
+          <!-- task notificatoin start -->
+         
+          <!-- task notificatoin end -->
+          <!-- inbox notificatoin start-->
+
+          <!-- inbox notificatoin end -->
+          <!-- alert notification start-->
+
+          <!-- alert notification end-->
+          <!-- user login dropdown start-->
+          <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="profile-ava">
+                                <img alt="" src="static/imgst/avatar-mini2.jpg">
+                            </span>
+                            <span class="username">ADMIN</span>
+                            <b class="caret"></b>
+                        </a>
+            <ul class="dropdown-menu extended logout">
+              <div class="log-arrow-up"></div>
+              
+              <li>
+                <a href="{{url_for('front')}}"><i class="icon_key_alt"></i> Log Out</a>
+              </li>
+
+            </ul>
+          </li>
+          <!-- user login dropdown end -->
+        </ul>
+        <!-- notificatoin dropdown end-->
+      </div>
+    </header>
+    <!--header end-->
+
+    <!--sidebar start-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu">
+          <li class="active">
+            <a class="" href="">
+                          <i class="icon_house_alt"></i>
+                          <span>Dashboard</span>
+                      </a>
+          </li>
+          <li>
+            <a class="" href="{{url_for('stvieweventreg',id=stuid)}}">
+                          <i class="icon_genius"></i>
+                          <span>VIEW REGISTER</span>
+                      </a>
+          </li>
+          <li>
+            <a class="" href="{{url_for('docstudent',id=stuid)}}">
+                          <i class="icon_piechart"></i>
+                          <span>DOCKETS</span>
+
+                      </a>
+
+          </li>
+        
+
+
+         
+        </ul>
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper">
+        <!--overview start-->
+    
+          <div class="row">
+
+          <center><h1>SPORTS CLUB</h1></center> 
+         </div>
+          <div class="">
+            <div id="profile" class="tab-pane">
+              <section class="panel">
+                <div class="bio-graph-heading">
+                 <p>A Sport Club is defined as a registered student organization that exists to promote and develop interest in a particular sport or physical activity. A club's focus may be recreational, instructional, competitive, or a combination of these types of activities based on its constitution.</p> 
+                 <p>Sport clubs provide an opportunity for children and youth to learn skills that will help them in school, as well as in their future careers and personal relationship. Through engagement in sport, they learn leadership, teamwork, problem-solving, responsibility, self-discipline, and a sense of initiative.</p>  
+                 <P>Many sports clubs set up and continue to run as an unincorporated association, bound together by common rules. Becoming incorporated makes the club a separate legal entity which means club members are not personally responsible for its debts. There are several different incorporation structures to consider.</P>   
+                </div>
+              </section>  
+
+       
+          <div class="container">
+            <div class="row">
+              <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                     
+                      <th scope="col">Event name</th>
+                      <th scope="col">Club name</th>
+                      <th scope="col">Dewan name</th>
+                      <th scope="col">Department</th>
+                      <th scope="col">Place</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Time</th>
+                      <th scope="col">Description</th>
+                      <th scope="col">Register</th>
+                     
+                    </tr>
+                  </thead>
+                  <tbody>
+                      {%for viw in view%}
+                      <tr>
+                          <td>{{ viw [1] }}</td>
+                          <td>{{ viw [2] }}</td>
+                          <td>{{ viw [3] }}</td>
+                          <td>{{ viw [4] }}</td>
+                          <td>{{ viw [5] }}</td>
+                          <td>{{ viw [6] }}</td>
+                          <td>{{ viw [7] }}</td>
+                          <td>{{ viw [8] }}</td>
+                          <td><a href="{{url_for('steventreg',id=viw[0],stid=stuid)}}">Register here</a></td>
+                        
+                      </tr>
+                      {%endfor%}	
+                    </tbody>
+              </table>         
+            </div>
+
+      
+        
+          
+ 
+           
+  
+
+          
+                   
+
+                
+                
+
+                
+        </div>
+          
+
+
+
+      </section>
+      <div class="text-right">
+        <div class="credits">
+          <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
+          -->
+          
+        </div>
+      </div>
+    </section>
+    <!--main content end-->
+  </section>
+  <!-- container section start -->
+
+  <!-- javascripts -->
+  <script src="static/jsst/jquery.js"></script>
+  <script src="static/jsst/jquery-ui-1.10.4.min.js"></script>
+  <script src="static/jsst/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="static/jsst/jquery-ui-1.9.2.custom.min.js"></script>
+  <!-- bootstrap -->
+  <script src="static/jsst/bootstrap.min.js"></script>
+  <!-- nice scroll -->
+  <script src="static/jsst/jquery.scrollTo.min.js"></script>
+  <script src="static/jsst/jquery.nicescroll.js" type="text/javascript"></script>
+  <!-- charts scripts -->
+  <script src="static/assetsst/jquery-knob/js/jquery.knob.js"></script>
+  <script src="static/jsst/jquery.sparkline.js" type="text/javascript"></script>
+  <script src="static/assetsst/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
+  <script src="static/jsst/owl.carousel.js"></script>
+  <!-- jQuery full calendar -->
+  <script src="static/jsst/fullcalendar.min.js"></script>
+    <!-- Full Google Calendar - Calendar -->
+    <script src="static/assetsst/fullcalendar/fullcalendar/fullcalendar.js"></script>
+    <!--script for this page only-->
+    <script src="static/jsst/calendar-custom.js"></script>
+    <script src="static/jsst/jquery.rateit.min.js"></script>
+    <!-- custom select -->
+    <script src="static/jsst/jquery.customSelect.min.js"></script>
+    <script src="static/assetsst/chart-master/Chart.js"></script>
+
+    <!--custome script for all page-->
+    <script src="static/jsst/scripts.js"></script>
+    <!-- custom script for this page-->
+    <script src="static/jsst/sparkline-chart.js"></script>
+    <script src="static/jsst/easy-pie-chart.js"></script>
+    <script src="static/jsst/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="static/jsst/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="static/jsst/xcharts.min.js"></script>
+    <script src="static/jsst/jquery.autosize.min.js"></script>
+    <script src="static/jsst/jquery.placeholder.min.js"></script>
+    <script src="static/jsst/gdp-data.js"></script>
+    <script src="static/jsst/morris.min.js"></script>
+    <script src="static/jsst/sparklines.js"></script>
+    <script src="static/jsst/charts.js"></script>
+    <script src="static/jsst/jquery.slimscroll.min.js"></script>
+    <script>
+      //knob
+      $(function() {
+        $(".knob").knob({
+          'draw': function() {
+            $(this.i).val(this.cv + '%')
+          }
+        })
+      });
+
+      //carousel
+      $(document).ready(function() {
+        $("#owl-slider").owlCarousel({
+          navigation: true,
+          slideSpeed: 300,
+          paginationSpeed: 400,
+          singleItem: true
+
+        });
+      });
+
+      //custom select box
+
+      $(function() {
+        $('select.styled').customSelect();
+      });
+
+      /* ---------- Map ---------- */
+      $(function() {
+        $('#map').vectorMap({
+          map: 'world_mill_en',
+          series: {
+            regions: [{
+              values: gdpData,
+              scale: ['#000', '#000'],
+              normalizeFunction: 'polynomial'
+            }]
+          },
+          backgroundColor: '#eef3f7',
+          onLabelShow: function(e, el, code) {
+            el.html(el.html() + ' (GDP - ' + gdpData[code] + ')');
+          }
+        });
+      });
+    </script>
+
+</body>
+
+</html>

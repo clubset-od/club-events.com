@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Docket home</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{url_for('static',filename='static/assetsdh/imgdh/favicon.png')}}" rel="icon">
+  <link href="{{url_for('static',filename='assetsdh/imgdh/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{url_for('static',filename='assetsdh/vendordh/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsdh/vendordh/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsdh/vendordh/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsdh/vendordh/remixicon/remixicon.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsdh/vendordh/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsdh/vendordh/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{url_for('static',filename='assetsdh/cssdh/style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.0.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+      
+        <span>STUDENT CO-ORDINATOR HOME</span>
+      </a>
+
+    
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <br/> <br/>   
+         <header class="section-header">
+          
+          <p>UPDATE ATTENDANCE</p>
+        </header>
+<center>
+       
+  <form class="form-validate form-horizontal" id="feedback_form" method="POST" action="" enctype="multipart/form-data">
+                      
+                     
+                      
+                      
+                      
+    <div class="form-group ">
+      <label for="cname" class="control-label col-lg-2">Event Name <span class="required"  >*</span></label>
+      <div class="col-lg-10">
+        <input class="form-control" id="name" name="eventname" value="{{od[1]}}" type="text" required readonly />
+      </div>
+    </div><br>
+    <div class="form-group ">
+      <label for="cname" class="control-label col-lg-2">Club Name <span class="required"  >*</span></label>
+      <div class="col-lg-10">
+        <input class="form-control" id="name" name="clubname" value="{{od[2]}}" type="text" required  readonly/>
+      </div>
+    </div><br>
+    <center>
+      <div class="form-group">
+        <label></label>
+        <input type="file" class="form-control-file" name="files" id="exampleFormControlFile1">
+      </div>
+    </center><br>
+    <div class="form-group">
+      <div class="col-lg-offset-2 col-lg-10">
+        <button class="btn btn-primary" type="submit">UPLOAD</button>
+      
+      </div>
+    </div>
+  </form>
+           
+        
+        </center>
+  <main id="main">
+  
+    
+
+    
+  <!-- Vendor JS Files -->
+  <script src="static/assetsdh/vendordh/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="static/assetsdh/vendordh/aos/aos.js"></script>
+  <script src="static/assetsdh/vendordh/php-email-form/validate.js"></script>
+  <script src="static/assetsdh/vendordh/swiper/swiper-bundle.min.js"></script>
+  <script src="static/assetsdh/vendordh/purecounter/purecounter.js"></script>
+  <script src="static/assetsdh/vendordh/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assetsdh/vendordh/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assetsdh/jsdh/main.js"></script>
+  <script>
+    (function(document) {
+        'use strict';
+
+        var TableFilter = (function(myArray) {
+            var search_input;
+
+            function _onInputSearch(e) {
+                search_input = e.target;
+                var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
+                myArray.forEach.call(tables, function(table) {
+                    myArray.forEach.call(table.tBodies, function(tbody) {
+                        myArray.forEach.call(tbody.rows, function(row) {
+                            var text_content = row.textContent.toLowerCase();
+                            var search_val = search_input.value.toLowerCase();
+                            row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
+                        });
+                    });
+                });
+            }
+
+            return {
+                init: function() {
+                    var inputs = document.getElementsByClassName('search-input');
+                    myArray.forEach.call(inputs, function(input) {
+                        input.oninput = _onInputSearch;
+                    });
+                }
+            };
+        })(Array.prototype);
+
+        document.addEventListener('readystatechange', function() {
+            if (document.readyState === 'complete') {
+                TableFilter.init();
+            }
+        });
+
+    })(document);
+    
+    function exportTableToExcel(tableID, filename = ''){
+var downloadLink;
+var dataType = 'application/vnd.ms-excel';
+var tableSelect = document.getElementById(tableID);
+var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+
+// Specify file name
+filename = filename?filename+'.xls':'excel_data.xls';
+
+// Create download link element
+downloadLink = document.createElement("a");
+
+document.body.appendChild(downloadLink);
+
+if(navigator.msSaveOrOpenBlob){
+    var blob = new Blob(['\ufeff', tableHTML], {
+        type: dataType
+    });
+    navigator.msSaveOrOpenBlob( blob, filename);
+}else{
+    // Create a link to the file
+    downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+
+    // Setting the file name
+    downloadLink.download = filename;
+    
+    //triggering the function
+    downloadLink.click();
+}
+}
+</script>
+
+
+</body>
+
+</html>
+                   
+                

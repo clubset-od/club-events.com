@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Front page</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{url_for('static',filename='static/assetsf/imgf/favicon.png')}}" rel="icon">
+  <link href="{{url_for('static',filename='assetsf/imgf/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{url_for('static',filename='assetsf/vendorf/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsf/vendorf/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsf/vendorf/modal-video/css/modal-video.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsf/vendorf/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsf/vendorf/aos/aos.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{url_for('static',filename='assetsf/cssf/style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: eStartup - v2.2.1
+  * Template URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="index.html"><span>ABOUT CLUB</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      
+    </div>
+  </header><!-- End Header -->
+
+  
+
+  <main id="main">
+        
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="padd-section text-center">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+          <h2>FINE ARTS CLUB </h2>
+
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          {%for eve in event%}
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="static/assetsf/imgf/svg/paint-palette.svg" alt="img" class="img-fluid">
+              <h4>{{eve[1]}}</h4>
+              <p><a href="{{url_for('viewcertificates',id=eve[0])}}">VIEW CERTIFICATES</a></p>
+            </div>
+          </div>
+         {%endfor%}
+
+
+
+
+        </div>
+      </div>
+    </section><!-- End Features Section -->
+    
+
+
+    
+
+  <!-- Vendor JS Files -->
+  <script src="static/assetsf/vendorf/jquery/jquery.min.js"></script>
+  <script src="static/assetsf/vendorf/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assetsf/vendorf/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/assetsf/vendorf/php-email-form/validate.js"></script>
+  <script src="static/assetsf/vendorf/modal-video/js/modal-video.min.js"></script>
+  <script src="static/assetsf/vendorf/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/assetsf/vendorf/superfish/superfish.min.js"></script>
+  <script src="static/assetsf/vendorf/hoverIntent/hoverIntent.js"></script>
+  <script src="static/assetsf/vendorf/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assetsf/jsf/main.js"></script>
+
+</body>
+
+</html>
